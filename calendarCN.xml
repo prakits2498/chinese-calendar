@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="中国日历" 
+<ModulePrefs title="中国年历" 
           height="320" width="320"
           author="Morrison Li" author_email="morrisonli@126.com" author_link="http://spaces.msn.com/morrisonli/"
-          screenshot="http://nextdevil.bravehost.com/xml/calendarCNShot.png"
-          thumbnail="http://nextdevil.bravehost.com/xml/calendarCNicon.png"
+          screenshot="http://chinese-calendar.googlecode.com/svn/trunk/calendarCNshot.png"
+          thumbnail="hhttp://chinese-calendar.googlecode.com/svn/trunk/calendarCNicon.png"
           scaling="false"
           singleton="true"
-          description="一个支持中国公农历、节日、干支等的日历控件"/>
+          description="支持中国公农历、节日、干支等的日历控件"/>
 <UserPref name="clrWeekend"
           display_name="周末日期颜色"
           datatype="enum"
-          default_value="3"
-          required="true">
+          default_value="3">
       <EnumValue value="1" display_value="黑色"/>
       <EnumValue value="2" display_value="绿色"/>
       <EnumValue value="3" display_value="红色"/>
@@ -1332,8 +1331,7 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
              for(j=0;j<7;j++) {
                 gNum = i*7+j
                 document.write('<td id="GD' + gNum +'" onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" valign="top"><font id="SD' + gNum +'" size=4 face="Arial Black"')
-                if(j == 0) document.write(' color=red')
-                if(j == 6) {
+                if(j == 0 || j == 6) {
                    if(i%2==1) document.write(' color='+color2)
                       else document.write(' color='+color1)
                 }
