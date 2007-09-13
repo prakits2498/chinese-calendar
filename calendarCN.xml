@@ -8,6 +8,15 @@
           scaling="false"
           singleton="true"
           description="一个支持中国公农历、节日、干支等的日历控件"/>
+<UserPref name="clrWeekend"
+          display_name="周末日期颜色"
+          datatype="enum"
+          default_value="3"
+          required="true">
+      <EnumValue value="1" display_value="黑色"/>
+      <EnumValue value="2" display_value="绿色"/>
+      <EnumValue value="3" display_value="红色"/>
+</UserPref>
 <Content type="html"><![CDATA[
 
 <!--
@@ -46,7 +55,8 @@
 *****************************************************************************/
 
 var conWeekend = 3;  // 星期六颜色显示: 1=黑色, 2=绿色, 3=红色, 4=隔周休
-
+var clrPrefs = new _IG_Prefs();
+conWeekend = clrPrefs.getInt("clrWeekend");  
 
 /*****************************************************************************
                                  日期数据
