@@ -1279,8 +1279,8 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
     <!------------------------------ 万年历 ----------------------------------->
   <FORM name=CLD onsubmit="return false;">
   <TD align=middle>
-    <DIV style="Z-INDEX: -1; POSITION: absolute; TOP: 30px">
-    <FONT id=YMBG style="FONT-SIZE: 100pt; COLOR: #f0f0f0; FONT-FAMILY: 'Arial Black'">&nbsp;0000<BR>&nbsp;JUN</FONT>
+    <DIV style="Z-INDEX: -1; POSITION: absolute; TOP: 40px">
+    <FONT id=YMBG style="FONT-SIZE: 70pt; COLOR: #f0f0f0; FONT-FAMILY: 'Arial Black'">&nbsp;0000<BR>&nbsp;JUN</FONT>
     </DIV>
     <TABLE border=0>
       <TBODY>
