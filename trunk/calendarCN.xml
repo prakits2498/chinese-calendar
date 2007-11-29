@@ -1301,13 +1301,13 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
       </TR>
       <TR align=middle>
         <TD width=5>&nbsp;</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">日</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">一</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">二</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">三</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">四</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">五</TD>
-        <TD width=40  bgColor=#e0e0e0 style="FONT-SIZE: 10pt">六</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">日</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">一</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">二</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">三</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">四</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">五</TD>
+        <TD width=40  align=center bgColor=#e0e0e0 style="FONT-SIZE: 10pt">六</TD>
         <TD width=5>&nbsp;</TD></TR>
       <SCRIPT language=JavaScript><!--
           var gNum, color1, color2;
@@ -1338,7 +1338,7 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
                 	document.write('<td>&nbsp;</td>');
                 } else {
 	                gNum = i*7+j
-	                document.write('<td id="GD' + gNum +'" onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" valign="top" nowrap><font id="SD' + gNum +'" size=4 face="Arial Black"')
+	                document.write('<td id="GD' + gNum +'" onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" valign="top"><font id="SD' + gNum +'" size=4 face="Arial Black"')
 	                if(j == 0 || j == 6) {
 	                   if(i%2==1) document.write(' color='+color2)
 	                      else document.write(' color='+color1)
