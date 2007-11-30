@@ -1362,7 +1362,7 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
           //--></SCRIPT>
        <TR style="Z-INDEX: -1; POSITION: absolute; TOP: 40px">
       <TD align="center" colspan="9">
-      <FONT id=YMBG style="FONT-SIZE: 70pt; COLOR: #F0F0C0; FONT-FAMILY: 'Arial Black'">
+      <FONT id=YMBG style="FONT-SIZE: 70pt; COLOR: #F0F0F0; FONT-FAMILY: 'Arial Black'">
       	<SPAN id="YBG">0000</SPAN><BR><SPAN id="MBG">JUN</SPAN>
       </FONT>
       </TD>   
