@@ -760,7 +760,9 @@ function drawCld(SY,SM) {
 
    document.getElementById("GZ").innerHTML = '农历岁次' + cyclical(SY-1900+36) + '年 【'+Animals[(SY-4)%12]+'】';
 
-   document.getElementById("YMBG").innerHTML = "&nbsp;" + SY + "<BR>&nbsp;" + monthName[SM];
+   // document.getElementById("YMBG").innerHTML = "&nbsp;" + SY + "<BR>&nbsp;" + monthName[SM];
+   document.getElementById("YBG").innerHTML = SY;
+   document.getElementById("MBG").innerHTML = monthName[SM];
 
    for(i=0;i<42;i++) {
 
@@ -1219,7 +1221,14 @@ function terminate() {
 //-->
 </script>
 <STYLE>
-.todayColor { background-color: aqua; border: 2px ridge blue; }
+.todayColor { 
+	background-color: aqua; 
+	border: 2px ridge blue; }
+.roller {
+	font-family: Arial;
+	font-size: 9pt;
+	color: #000080;
+	text-decoration: none; }
 </STYLE>
 
 <SCRIPT language=Javascript>
@@ -1278,14 +1287,16 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
     onchange=chCountry() name=countryMenu></SELECT></P></TD></FORM>
     <!------------------------------ 万年历 ----------------------------------->
   <FORM name=CLD onsubmit="return false;">
-  <TD align=middle>
+  <TD align="center">
+    <!--
     <DIV style="Z-INDEX: -1; POSITION: absolute; TOP: 40px">
     <FONT id=YMBG style="FONT-SIZE: 70pt; COLOR: #f0f0f0; FONT-FAMILY: 'Arial Black'">&nbsp;0000<BR>&nbsp;JUN</FONT>
     </DIV>
+    -->
     <TABLE border=0>
       <TBODY>
       <TR>
-        <TD align="center" valign="middle"><SPAN style="FONT-SIZE: 9pt;COLOR: #000080" onclick="pushBtm('MU')">◄</SPAN></TD>
+        <TD><A href="◄" class="roller" onclick="pushBtm('MU'); return false;">◄</A></TD>
         <TD bgColor=#000080 colSpan=7 align=center><FONT style="FONT-SIZE: 10pt"
           color=#ffffff>公历<SELECT style="FONT-SIZE: 10pt" onchange=changeCld() name=SY>
             <SCRIPT language=Javascript><!--
@@ -1297,7 +1308,7 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
           for(i=1;i<13;i++) document.write('<option>'+i)
           //--></SCRIPT>
           </SELECT>月</FONT> <FONT id=GZ face=楷书体 color=#ffffff style="FONT-SIZE: 10pt"></FONT><BR></TD>
-		<TD align="center" valign="middle"><SPAN style="FONT-SIZE: 9pt;COLOR: #000080" onclick="pushBtm('MD')">►</BUTTON></TD>
+		<TD><A href="►" class="roller" onclick="pushBtm('MD'); return false;">►</A></TD>
       </TR>
       <TR align=middle>
         <TD width=5>&nbsp;</TD>
@@ -1349,7 +1360,14 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
              document.write('</tr>')
           }
           //--></SCRIPT>
-      </TBODY></TABLE></TD>
+       <TR style="Z-INDEX: -1; POSITION: absolute; TOP: 40px">
+      <TD align="center" colspan="9">
+      <FONT id=YMBG style="FONT-SIZE: 70pt; COLOR: #F0F0C0; FONT-FAMILY: 'Arial Black'">
+      	<SPAN id="YBG">0000</SPAN><BR><SPAN id="MBG">JUN</SPAN>
+      </FONT>
+      </TD>   
+      </TR>    
+     </TBODY></TABLE></TD>
   <TD vAlign=top align=middle width=40 style=display:none><BR><BR><BR>年<BR>
 <BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('YD')">▲</BUTTON><BR>
 <BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('YU')">▼</BUTTON>
