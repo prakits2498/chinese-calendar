@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs title="中国年历" 
-          height="320" width="320"
+          width="320"
           author="Morrison Li" author_email="morrisonli@126.com" author_link="http://spaces.msn.com/morrisonli/"
           screenshot="http://chinese-calendar.googlecode.com/svn/trunk/calendarCNshot.png"
           thumbnail="hhttp://chinese-calendar.googlecode.com/svn/trunk/calendarCNicon.png"
           scaling="false"
           singleton="true"
-          description="支持中国公农历、节日、干支等的日历控件"/>
+          description="支持中国公农历、节日、干支等的日历控件">
+          <Require feature="dynamic-height"/>
+</ModulePrefs>
 <UserPref name="clrWeekend"
           display_name="周末日期颜色"
           datatype="enum"
@@ -1359,6 +1361,9 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
              }
              document.write('</tr>')
           }
+          
+          _IG_AdjustIFrameHeight();
+          
           //--></SCRIPT>
        <TR style="Z-INDEX: -1; POSITION: absolute; TOP: 40px">
       <TD align="center" colspan="9">
